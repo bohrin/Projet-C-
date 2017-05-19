@@ -24,11 +24,11 @@ void Formes::dessiner(EZWindow & w)
   }
 }
 
-void Formes::ajouter(Formes *f)
+void Formes::ajouter(Forme *f)
 {
   if (nbformes < maxformes)
   {
-    formes[nbformes++]f;
+    formes[nbformes++]=f;
   }
   else
   {
@@ -36,7 +36,7 @@ void Formes::ajouter(Formes *f)
   }
 }
 
-Forme* Formes::isOver(uint x, y)
+Forme* Formes::isOver(uint x, uint y)
 {
   for(size_t i=0; i<nbformes; ++i)
   {
@@ -68,6 +68,6 @@ void Formes::charger(istream & is)
   is >> nb;
   for(size_t i=0; i<nb;++i)
   {
-    ajouter(Forme::charger(is));
+    ajouter(Formes::charger(is));
   }
 }

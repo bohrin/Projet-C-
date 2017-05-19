@@ -2,8 +2,8 @@
 
 using namespace std;
 
-Rectangle::Rectangle(ulong couleur_, uint x_, uint y_, uint _largeur, uint _longeur):Forme (couleur_, x_, y_),
-largeur(_largeur), hauteur(hauteur)
+Rectangle::Rectangle(ulong couleur_, uint x_, uint y_, uint _largeur, uint _hauteur):Forme (couleur_, x_, y_),
+largeur(_largeur), hauteur(_hauteur)
 {
   cerr << "Rectangle (ulong couleur_, ...)" << endl;
 }
@@ -33,7 +33,7 @@ void Rectangle::ecrire(ostream & os) const
 
 void Rectangle::dessiner(EZWindow & w, bool isactive) const
 {
-  Forme::dessiner(isactive);
+  Forme::dessiner(w, isactive);
   const Point & ancre = getAncre();
   w.drawRectangle(ancre.getx(), ancre.gety(), ancre.getx() + largeur, ancre.gety() + hauteur);
 }

@@ -16,7 +16,7 @@ class Rectangle : public Forme
     Rectangle(const Rectangle & orig );
     Rectangle(istream & is);
     ~Rectangle();
-    void dessiner(EZWindow & f , bool isActive = false )const override;
+    void dessiner(EZWindow & f , bool isActive )const override;
     inline uint getLargeur() const {return largeur;}
     inline void setLargeur(uint _largeur) {largeur =  _largeur;}
     inline uint getHauteur() const {return hauteur;}

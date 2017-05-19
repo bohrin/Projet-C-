@@ -8,12 +8,12 @@ using namespace std;
 #include "ez-draw++.hpp"
 #include "MyWindow.hpp"
 
-#include "Formes.hpp"
+#include "formes.hpp"
 
-#include "Point.hpp"   // Uniquement pour le constructeur qui peuple la fenêtre
+#include "point.hpp"   // Uniquement pour le constructeur qui peuple la fenêtre
 //#include "Ellipse.hpp" // avec quelques formes.
 //#include "Cercle.hpp"
-#include "Rectangle.hpp"
+#include "rectangle.hpp"
 //#include "Carre.hpp"
 
 MyWindow::MyWindow(int w, int h,const char *name)

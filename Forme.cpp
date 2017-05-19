@@ -17,10 +17,10 @@ Forme::Forme( istream & is)
 Forme::~Forme()
 {cerr << "Forme::~Forme()"<< endl;}
 
-void Forme::dessiner(EZWindow & f, bool isactive)
+void Forme::dessiner(EZWindow & f, bool isActive)const
 {
 	f.setColor(ez_black);
-	ancre.dessiner(f, isactive); // il y a une connerie ici probablement warning
+	ancre.dessiner(f, isActive); // il y a une connerie ici probablement warning
     f.setColor(couleur);
 }
 

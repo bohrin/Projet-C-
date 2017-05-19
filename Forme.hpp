@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Point.hpp"
+#include "point.hpp"
 using namespace std;
 
 typedef unsigned long ulong;
@@ -20,7 +20,7 @@ class Forme{
 	   inline Point getAncre()const {return ancre;};
 	   inline void setAncre (Point _ancre) {ancre= _ancre;};
 	   inline bool isOver( uint _x, uint _y) {return ancre.isOver(_x, _y);};
-	   virtual void dessiner (EZWindow & p, bool isactive);
+	   virtual void dessiner (EZWindow & f, bool isActive= false)const;
 	   void ecrire(ostream & os);
 	   friend ostream & operator << (ostream & os, const Forme & forme);
 	   virtual double perimetre() const;
