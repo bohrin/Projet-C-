@@ -13,8 +13,8 @@ class Forme{
 	 public:
 	   Forme (ulong couleur, uint x, uint y);
 	   Forme (const Forme & orig);
-	   Forme( istream & is);
-	   ~Forme ();
+	   Forme( iostream & is);
+	   virtual ~Forme ();
 	   inline ulong getCouleur() const {return couleur;};
 	   inline void setCouleur( ulong couleur_){couleur= couleur_;};
 	   inline Point getAncre()const {return ancre;};
@@ -24,5 +24,5 @@ class Forme{
 	   void ecrire(ostream & os);
 	   friend ostream & operator << (ostream & os, const Forme & forme);
 	   virtual double perimetre() const;
-	   static Forme *charger(ostream & os);
+	   static Forme *charger(iostream & is);
 };

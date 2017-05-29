@@ -44,30 +44,30 @@ Forme* Formes::isOver(uint x, uint y)
     {
       return formes[i];
     }
-  return nullptr;
   }
+  return nullptr;
 }
 
 ostream & operator << (ostream & os, const Formes & fs)
 {
-  for (size_t i = 0; i < nbformes; i++)
+  for (size_t i = 0; i < fs.nbformes; i++)
   {
     os<< *fs.formes[i] << endl;
   }
   return os;
 }
 
-void Formes::charger(istream & is)
+void Formes::charger(iostream & is)
 {
   for (size_t i=0; i<nbformes; ++i)
   {
     delete formes[i];
   }
   nbformes = 0;
-  size_t nb;
-  is >> nb;
+  size_t nb=0;
+  is << nb;
   for(size_t i=0; i<nb;++i)
   {
-    ajouter(Formes::charger(is));
+    ajouter(Forme::charger(is));
   }
 }

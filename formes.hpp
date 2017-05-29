@@ -1,5 +1,5 @@
 #include "Forme.hpp"
-#include "ez-draw++.hpp"
+
 
 using namespace std;
 
@@ -17,5 +17,5 @@ public:
   void dessiner(EZWindow & w);
   friend ostream & operator << (ostream & os, const Formes & fs);
   void sauver(ostream & os)const;
-  void charger(istream & is);
+  void charger(iostream & is);
 };

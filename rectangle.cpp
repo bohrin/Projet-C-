@@ -1,4 +1,6 @@
+#include<iostream>
 #include "rectangle.hpp"
+
 
 using namespace std;
 
@@ -8,7 +10,7 @@ largeur(_largeur), hauteur(_hauteur)
   cerr << "Rectangle (ulong couleur_, ...)" << endl;
 }
 
-Rectangle::Rectangle(istream & is):Forme(is), largeur(5), hauteur(5)
+Rectangle::Rectangle(iostream & is):Forme(is), largeur(5), hauteur(5)
 {
   is >> largeur >> hauteur;
   cerr << "Rectanglr::Rectangle(istream &)";

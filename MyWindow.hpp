@@ -3,7 +3,7 @@
 #ifndef MYWINDOW_HPP
 #define MYWINDOW_HPP
 
-#include "formes.hpp"
+#include "Formes.hpp"
 
 class MyWindow : public EZWindow {
   Formes formes;

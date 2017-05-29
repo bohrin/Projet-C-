@@ -1,7 +1,7 @@
 typedef unsigned int uint;
 
 #include "Forme.hpp"
-#include "ez-draw++.hpp"
+
 
 using namespace std;
 
@@ -14,7 +14,7 @@ class Rectangle : public Forme
   public:
     Rectangle(ulong couleur , uint x , uint y , uint largeur , uint hauteur);
     Rectangle(const Rectangle & orig );
-    Rectangle(istream & is);
+    Rectangle(iostream & is);
     ~Rectangle();
     void dessiner(EZWindow & f , bool isActive )const override;
     inline uint getLargeur() const {return largeur;}
