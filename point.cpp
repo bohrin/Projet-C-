@@ -39,3 +39,5 @@ istream & operator >> (istream & is, Point & p)
   is >> p.x >> p.y;
   return is;
 }
+
+

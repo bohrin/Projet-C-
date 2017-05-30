@@ -31,7 +31,7 @@ ostream & operator << (ostream & os, const Forme & forme)
 	return os;
 }
 
-void Forme:: ecrire (ostream & os)
+void Forme:: ecrire (ostream & os) const
 {
 	os << couleur<<""<<ancre;
 }

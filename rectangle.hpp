@@ -1,7 +1,9 @@
 typedef unsigned int uint;
 
 #include "Forme.hpp"
-
+#ifndef RECTANGLE_HPP
+#define RECTANGLE_HPP
+#define MyRectangle Rectangle
 
 using namespace std;
 
@@ -9,7 +11,8 @@ class Rectangle : public Forme
 {
   private:
     uint largeur, hauteur;
-    void ecrire (ostream & os) const;
+  protected:
+    void ecrire (ostream & os) const override;
 
   public:
     Rectangle(ulong couleur , uint x , uint y , uint largeur , uint hauteur);
@@ -23,3 +26,4 @@ class Rectangle : public Forme
     inline void setHauteur (uint _hauteur) {hauteur = _hauteur;}
     double perimetre () const override;
 };
+#endif

@@ -1,5 +1,6 @@
 #include "Forme.hpp"
-
+#ifndef FORMES_HPP
+#define FORMES_HPP
 
 using namespace std;
 
@@ -19,3 +20,4 @@ public:
   void sauver(ostream & os)const;
   void charger(iostream & is);
 };
+#endif
