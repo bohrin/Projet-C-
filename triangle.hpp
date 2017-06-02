@@ -1,3 +1,5 @@
+#ifndef TRIANGLE_HPP
+#define TRIANGLE_HPP
 #include "Forme.hpp"
 
 using namespace std;
@@ -23,3 +25,4 @@ class Triangle : public Forme
     double perimetre() const override;
 
 };
+#endif

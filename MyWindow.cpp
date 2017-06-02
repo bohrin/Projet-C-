@@ -11,14 +11,17 @@ using namespace std;
 #include "formes.hpp"
 #include "Forme.hpp"
 #include "point.hpp"    //Uniquement pour le constructeur qui peuple la fenêtre
-//#include "Ellipse.hpp" // avec quelques formes.
+#include "Ellipse.hpp" // avec quelques formes.
 #include "cercle.hpp"
 #include "rectangle.hpp"
 #include "carre.hpp"
+//#include "triangle.hpp"
 
 MyWindow::MyWindow(int w, int h,const char *name)
  : EZWindow(w,h,name),formes(200),pforme(nullptr)
-{}
+{
+	setDoubleBuffer(true);  // Posera peut-etre probleme avec l'Image
+}
 
 MyWindow::~MyWindow()
 {}
@@ -61,12 +64,12 @@ void MyWindow::keyPress(EZKeySym keysym) // Une touche du clavier a ete enfoncee
      case EZKeySym::E:
       cout << formes;
       break;
-     case EZKeySym::S:
+    /* case EZKeySym::S:
       {
        ofstream f("formes.txt");
        formes.sauver(f);
       }
-      break;
+      break;*/
     /* case EZKeySym::C:
       {
        ifstream f("formes.txt");
@@ -98,20 +101,20 @@ void MyWindow::keyPress(EZKeySym keysym) // Une touche du clavier a ete enfoncee
            << "6 : met en cyan la forme"    << endl
            << "7 : met en magenta la forme" << endl
            << "r : crée un rectangle" << endl
-           //<< "e : crée une ellipse" << endl
+           << "e : crée une ellipse" << endl
            << "s : crée un carré" << endl
-           //<< "c : crée un cercle" << endl
-//           << "t : crée un triangle" << endl
+           << "c : crée un cercle" << endl
+          // << "t : crée un triangle" << endl
            ;
       break;
      case EZKeySym::r: formes.ajouter(new Rectangle(ez_black,getWidth()/2-25,getHeight()/2-25,getWidth()/2+25,getHeight()/2+25)); break;
 	 case EZKeySym::s: formes.ajouter(new Carre(ez_black,getHeight()/2-25,getHeight()/2-25,50)); break;
-/*   
+   
      case EZKeySym::e: formes.ajouter(new Ellipse(ez_black,getWidth()/2-25,getHeight()/2-15,50,30)); break;
      
      case EZKeySym::c: formes.ajouter(new Cercle(ez_black,getWidth()/2-25,getHeight()/2-25,25)); break;
-     case EZKeySym::t: formes.ajouter(new Triangle(ez_black,getWidth()/2,getHeight()/2-50,getWidth()/2-25,getHeight()/2-30,getWidth()/2+25,getHeight()/2-30)); break;
-*/     
+     //case EZKeySym::t: formes.ajouter(new Triangle(ez_black,getWidth()/2,getHeight()/2-50,getWidth()/2-25,getHeight()/2-30,getWidth()/2+25,getHeight()/2-30)); break;
+    
 	 default:
       break;
     }
