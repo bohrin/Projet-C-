@@ -1,0 +1,10 @@
+ez-draw++.o: ez-draw++.cpp ez-draw++.hpp
+Forme.o: Forme.cpp Forme.hpp point.hpp ez-draw++.hpp
+formes.o: formes.cpp formes.hpp Forme.hpp point.hpp ez-draw++.hpp
+main.o: main.cpp ez-draw++.hpp MyWindow.hpp Formes.hpp Forme.hpp \
+ point.hpp
+MyWindow.o: MyWindow.cpp ez-draw++.hpp MyWindow.hpp Formes.hpp Forme.hpp \
+ point.hpp Point.hpp Rectangle.hpp
+point.o: point.cpp point.hpp ez-draw++.hpp
+rectangle.o: rectangle.cpp rectangle.hpp Forme.hpp point.hpp \
+ ez-draw++.hpp
